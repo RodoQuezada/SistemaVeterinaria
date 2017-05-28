@@ -29,10 +29,10 @@
         <a href="/" class="navbar-brand">VETERINARIA</a>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="nuevo-clientes">INGRESAR CLIENTE</a></li>
-                <li><a href="lista-clientes">LISTA DE CLIENTES</a></li>
-                <li><a href="lista-mascotas">LISTA DE MASCOTAS</a></li>
-                <li><a href="lista-consulta">LISTA DE CONSULTA</a></li>
+                <li><a href="/cliente/nuevo-clientes">INGRESAR CLIENTE</a></li>
+                <li><a href="/cliente/lista-clientes">LISTA DE CLIENTES</a></li>
+                <li><a href="/mascota/lista-mascotas">LISTA DE MASCOTAS</a></li>
+                <li><a href="/consulta/lista-consulta">LISTA DE CONSULTA</a></li>
             </ul>
         </div>
     </div>
@@ -87,13 +87,13 @@
                             </td>
 
                             <td>
-                                <a href="actualizar-cliente?rut=${cliente.rut}"><span class="glyphicon glyphicon-pencil"></span></a>
+                                <a href="/cliente/actualizar-cliente?rut=${cliente.rut}"><span class="glyphicon glyphicon-pencil"></span></a>
                             </td>
                             <td>
-                                <a href="borrar-cliente?rut=${cliente.rut}"><span class="glyphicon glyphicon-trash"></span></a>
+                                <a href="/cliente/borrar-cliente?rut=${cliente.rut}"><span class="glyphicon glyphicon-trash"></span></a>
                             </td>
                             <td>
-                                <a href="nueva-mascota?rut=${cliente.rut}"><span class="glyphicon glyphicon-plus"></span></a>
+                                <a href="/mascota/nueva-mascota?rut=${cliente.rut}"><span class="glyphicon glyphicon-plus"></span></a>
                             </td>
                         </tr>
                     </c:forEach>
@@ -200,10 +200,10 @@
                                     ${mascota.nombre}
                             </td>
                             <td>
-                                <a href="borrar-mascota?id=${mascota.id}"><span class="glyphicon glyphicon-trash"></span></a>
+                                <a href="/mascota/borrar-mascota?id=${mascota.id}"><span class="glyphicon glyphicon-trash"></span></a>
                             </td>
                             <td>
-                                <a href="nueva-consulta?rut=${mascota.rut}"><span class="glyphicon glyphicon-calendar"></span></a>
+                                <a href="/consulta/nueva-consulta?id=${mascota.id}&rut=${mascota.rut}"><span class="glyphicon glyphicon-calendar"></span></a>
                             </td>
 
                         </tr>
@@ -222,7 +222,7 @@
                 <div class="form-group">
                     <label class="control-label col-md-3">RUT CLIENTE</label>
                     <div class="col-md-7">
-                        <input type="text" class="form-control" name="rut_cliente" value="${rut}" readonly="readonly">
+                        <input type="text" class="form-control" name="rut" value="${rut}" readonly="readonly">
                     </div>
                 </div>
                 <div class="form-group">
